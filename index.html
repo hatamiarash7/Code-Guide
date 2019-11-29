@@ -66,7 +66,7 @@ layout: default
       <li>برای جلو بردن کدها از tab معادل 2 فاصله خالی استفاده کنید</li>
       <li>کدهای زیرمجموعه فقط باید یک بار جلو بروند ( معادل 2 فاصله خالی )</li>
       <li>برای مقادیر تگ های همیشه از ( " ) استفاده کنید نه ( ' )</li>
-      <li>برای المان های مستقل مانند ( <code>&lt;img&gt;</code> ) از اسلش استفاده نکنید — در <a href="http://dev.w3.org/html5/spec-author-view/syntax.html#syntax-start-tag">HTML5</a> این مورد اختیاری می باشد</li>
+      <li>برای المان های مستقل مانند ( <code>&lt;img&gt;</code> ) از اسلش استفاده نکنید — در <a href="http://dev.w3.org/html5/spec-author-view/syntax.html#syntax-start-tag" target="_blank">HTML5</a> این مورد اختیاری می باشد</li>
       <li>تگ های اختیاری پایانی را حذف نکنید ( مانند <code>&lt;/li&gt;</code> یا <code>&lt;/body&gt;</code>)</li>
     </ul>
   </div>
@@ -78,7 +78,7 @@ layout: default
   </div>
   <div class="col">
     <h3>HTML5 doctype</h3>
-    <p>اجرای <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode">حالت استاندارد</a> و رندر گیری بهتر در هر مرورگی با قراردادن این تگ در ابتدای هر فایل HTML انجام خواهد شد.</p>
+    <p>اجرای <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode" target="_blank">حالت استاندارد</a> و رندر گیری بهتر در هر مرورگی با قراردادن این تگ در ابتدای هر فایل HTML انجام خواهد شد.</p>
   </div>
 </div>
 
@@ -99,7 +99,7 @@ layout: default
   <div class="col">
     <h3>سازگاری با Internet Explorer</h3>
     <p>مرور گر Internet Explorer یک تگ <code>&lt;meta&gt;</code> دارد که با استفاده از آن می توانید مشخص کنید این مرورگر از کدام نسخه برای رندرگیری صفحات استفاده نماید. در صورتی که تنظیمات خاصی برای این مورد مد نظر ندارید ، می توانید از مقدار <strong>edge</strong> استفاده کنید تا همیشه آخرین نسخه اعمال شود.</p>
-    <p>جهت اصلاعات بیشتر , <a href="https://stackoverflow.com/questions/6771258/what-does-meta-http-equiv-x-ua-compatible-content-ie-edge-do">این صفحه از سایت Stack Overflow</a> را مطالعه کنید.</p>
+    <p>جهت اصلاعات بیشتر , <a href="https://stackoverflow.com/questions/6771258/what-does-meta-http-equiv-x-ua-compatible-content-ie-edge-do" target="_blank">این صفحه از سایت Stack Overflow</a> را مطالعه کنید.</p>
   </div>
 </div>
 
@@ -122,8 +122,8 @@ layout: default
     <p>طبق قواعد HTML5 ، نیازی به تعریف ویژگی <code>type</code> برای فایل های جاوا اسکریپت یا CSS نیست. مانند <code>text/css</code> و <code>text/javascript</code> که این موارد به صورت پیشفرض اعمال شده و صحیح هستند.</p>
     <h4>لینک قواعد HTML5</h4>
     <ul>
-      <li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-style-element">استفاده از CSS</a></li>
-      <li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/scripting-1.html#the-script-element">استفاده از اسکریپت</a></li>
+      <li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-style-element" target="_blank">استفاده از CSS</a></li>
+      <li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/scripting-1.html#the-script-element" target="_blank">استفاده از اسکریپت</a></li>
     </ul>
   </div>
 </div>
@@ -185,102 +185,100 @@ layout: default
 <h2 id="css">CSS</h2>
 <div class="section" id="css-syntax">
   <div class="col">
-    <h3>Syntax</h3>
-    <ul>
-      <li>Use soft tabs with two spaces—they're the only way to guarantee code renders the same in any environment.</li>
-      <li>When grouping selectors, keep individual selectors to a single line.</li>
-      <li>Include one space before the opening brace of declaration blocks for legibility.</li>
-      <li>Place closing braces of declaration blocks on a new line.</li>
-      <li>Include one space after <code>:</code> for each declaration.</li>
-      <li>Each declaration should appear on its own line for more accurate error reporting.</li>
-      <li>End all declarations with a semi-colon. The last declaration's is optional, but your code is more error prone without it.</li>
-      <li>Comma-separated property values should include a space after each comma (e.g., <code>box-shadow</code>).</li>
-      <li>Don't include spaces after commas <em>within</em> <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code>, <code>hsla()</code>, or <code>rect()</code> values. This helps differentiate multiple color values (comma, no space) from multiple property values (comma with space).</li>
-      <li>Don't prefix property values or color parameters with a leading zero (e.g., <code>.5</code> instead of <code>0.5</code> and <code>-.5px</code> instead of <code>-0.5px</code>).</li>
-      <li>Lowercase all hex values, e.g., <code>#fff</code>. Lowercase letters are much easier to discern when scanning a document as they tend to have more unique shapes.</li>
-      <li>Use shorthand hex values where available, e.g., <code>#fff</code> instead of <code>#ffffff</code>.</li>
-      <li>Quote attribute values in selectors, e.g., <code>input[type="text"]</code>. <a href="http://mathiasbynens.be/notes/unquoted-attribute-values#css">They’re only optional in some cases</a>, and it’s a good practice for consistency.</li>
-      <li>Avoid specifying units for zero values, e.g., <code>margin: 0;</code> instead of <code>margin: 0px;</code>.</li>
-    </ul>
-    <p>Questions on the terms used here? See the <a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets#Syntax">syntax section of the Cascading Style Sheets article</a> on Wikipedia.</p>
+    {% highlight css %}{% include css/syntax.css %}{% endhighlight %}
   </div>
   <div class="col">
-    {% highlight css %}{% include css/syntax.css %}{% endhighlight %}
+    <h3>ترکیب</h3>
+    <ul>
+      <li>برای جلو بردن کدها از tab معادل 2 فاصله خالی استفاده کنید</li>
+      <li>وقتی که استایل ها را به صورت دسته ای اعمال میکنید ، اسامی انتخابگر ها را در یک خط بنویسید</li>
+      <li>جهت خوانا بودن بیشتر قبل از براکت شروع کننده ی بلک ، یک فاصله خالی بگذارید</li>
+      <li>براکت پایان دهنده ی بلاک را در یک خط جدید قرار دهید</li>
+      <li>بعد از هر علامت <code>:</code> برای ویژگی ها ، یک فاصله خالی بگذارید</li>
+      <li>جهت خطایابی بهتر ، هر تعریف را در یک خط جداگانه قرار دهید</li>
+      <li>در پایان هر خط تعریف ، یک <code>;</code> علامت بگذارید ، آخرین خط اختیاری است ولی جهت خطایابی بهتر آن را بگذارید</li>
+      <li>ویژگی هایی که مقادیر آن ها چندگانه هستند و با علامت <code>,</code> از هم جدا می شوند ، پس از علامت یک فاصله خالی بگذارید. مانند ( <code>box-shadow</code> )</li>
+      <li>درون مقادیر آرایه ای مانند <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code>, <code>hsla</code>, یا <code>()rect</code> از علامت <code>,</code> استفاده نکنید. در این صورت مقادیری که مربوط به رنگ هستند ، با دیگر مقادیر متمایز خواهند شد.</li>
+      <li>در اول مقادیر عددی از 0 استفاده نکنید ( برای مثال <code>5.</code> به جای <code>0.5</code> و <code>5px.-</code> به جای <code>0.5px-</code> )</li>
+      <li>برای مقادیر رنگی HEX از حروف انگلیسی کوچک استفاده کنید ، مانند <code>fff</code> به هنگام مشاهده کد ، حروف کوچک راحت تر از یکدیگر تشخیص داده می شوند.</li>
+      <li>در صورت ممکن برای مقادیر رنگی HEX از عبارت خلاصه تر استفاده کنید. برای مثال <code>fff</code> به جای <code>ffffff</code></li>
+      <li>به هنگام استفاده از ویژگی های یک تگ HTML در انتخاب گر ها ، مقدار آن را در <code>"</code> بگذارید. مانند <code>input[type="text"]</code>. در بعضی موارد آن ها <a href="http://mathiasbynens.be/notes/unquoted-attribute-values#css">اختیاری</a> هستند.</li>
+      <li>برای مقادیر 0 از واحد ها استفاده نکنید و صرفا همان 0 خالی را بگذارید مانند <code>margin: 0</code> به جای <code>margin: 0px</code></li>
+    </ul>
   </div>
 </div>
 
 <div class="section" id="css-declaration-order">
   <div class="col">
-    <h3>Declaration order</h3>
-    <p>Related property declarations should be grouped together following the order:</p>
-    <ol>
-      <li>Positioning</li>
-      <li>Box model</li>
-      <li>Typographic</li>
-      <li>Visual</li>
-      <li>Misc</li>
-    </ol>
-    <p>Positioning comes first because it can remove an element from the normal flow of the document and override box model related styles. The box model comes next as it dictates a component's dimensions and placement.</p>
-    <p>Everything else takes place <em>inside</em> the component or without impacting the previous two sections, and thus they come last.</p>
-    <p>For a complete list of properties and their order, please see the <a href="https://github.com/twbs/stylelint-config-twbs-bootstrap/blob/master/css/index.js">Bootstrap property order for Stylelint</a>.</p>
+    {% highlight css %}{% include css/declaration-order.css %}{% endhighlight %}
   </div>
   <div class="col">
-    {% highlight css %}{% include css/declaration-order.css %}{% endhighlight %}
+    <h3>ترتیب ویژگی ها</h3>
+    <p>در یک بلاک ، ویژگی هایی که در یک دسته بندی مرتبط وجود دارند باید به ترتیب قرار بگیرند :</p>
+    <ol>
+      <li>محل قرارگیری - Positioning</li>
+      <li>ابعاد و حالت - Box model</li>
+      <li>ویژگی های متنی - Typographic</li>
+      <li>ویژگی ها ظاهری - Visual</li>
+      <li>متفرقه - Misc</li>
+    </ol>
+    <p>ویژگی های مربوط به محل قرارگیری در ابتدا قرار می گیرند زیرا با توجه به ماهیتشان می توانند یک المان را از کادر خارج کرده یا مقادیر ابعاد و حالت را از بین ببرند. پس از آن ویژگی های مربوط به ابعاد و حالت المان می آید تا مکان نهایی المان و نوع قرارگیری آن را مشخص کند.</p>
+    <p>جهت مشاهده لیست کامل ویژگی ها و ترتیب قرارگیری آن ها به <a href="https://github.com/twbs/stylelint-config-twbs-bootstrap/blob/master/css/index.js" target="_blank">این صفحه</a> مراجعه کنید.</p>
   </div>
 </div>
 
 <div class="section" id="css-import">
   <div class="col">
-    <h3>Don't use <code>@import</code></h3>
-    <p>Compared to <code>&lt;link&gt;</code>s, <code>@import</code> is slower, adds extra page requests, and can cause other unforeseen problems. Avoid them and instead opt for an alternate approach:</p>
-    <ul>
-      <li>Use multiple <code>&lt;link&gt;</code> elements</li>
-      <li>Compile your CSS with a preprocessor like <a href="https://sass-lang.com/">Sass</a> or <a href="http://lesscss.org/">Less</a> into a single file</li>
-      <li>Concatenate your CSS files with features provided in Rails, Jekyll, and other environments</li>
-    </ul>
-    <p>For more information, <a href="http://www.stevesouders.com/blog/2009/04/09/dont-use-import/">read this article by Steve Souders</a>.</p>
+    {% highlight html %}{% include css/import.html %}{% endhighlight %}
   </div>
   <div class="col">
-    {% highlight html %}{% include css/import.html %}{% endhighlight %}
+    <h3>از <code>import@</code> استفاده نکنید</h3>
+    <p>در مقایسه با <code>&lt;link&gt;</code> ، <code>@import</code> بسیار کند تر عمل می کند. این مورد باعث می شود درخواست های اضافی ثبت شود و خطایابی را بسیار سخت تر می کند. می توانید از راه های جایگزین استفاده کنید :</p>
+    <ul>
+      <li>استفاده از چند <code>&lt;link&gt;</code> جداگانه</li>
+      <li>کل فایل های CSS را با استفاده از کتابخانه های پیش پردازنده مانند <a href="https://sass-lang.com" target="_blank">Sass</a> یا <a href="http://lesscss.org" target="_blank">Less</a> کامپایل کرده و به یک فایل تبدیل کنید</li>
+      <li>در صورت استفاده از فریموورک هایی مانند Rails یا Jekyll می توانید تمام فایل های CSS خود را با یکدیگر الحاق کنید</li>
+    </ul>
   </div>
 </div>
 
 <div class="section" id="css-media-queries">
   <div class="col">
-    <h3>Media query placement</h3>
-    <p>Place media queries as close to their relevant rule sets whenever possible. Don't bundle them all in a separate stylesheet or at the end of the document. Doing so only makes it easier for folks to miss them in the future. Here's a typical setup.</p>
+    {% highlight css %}{% include css/media-queries.css %}{% endhighlight %}
   </div>
   <div class="col">
-    {% highlight css %}{% include css/media-queries.css %}{% endhighlight %}
+    <h3>انتخاب گر های <code>media@</code></h3>
+    <p>در صورت استفاده از این انتخاب گر ها ، آن ها در نزدیک ترین مکان به بلاک های مربوطه قرار دهید. هیچوقت آن ها را به صورت جداگانه در جای دیگر ( مثلا آخر کد ها - مانند خیلی از قالب های آماده که خریداری می کنید ) قرار ندهید. جهت سهولت در برنامه نویسی و خطایابی های آینده ، آن ها را کنار بلاک مربوطه استفاده کنید.</p>
   </div>
 </div>
 
 <div class="section" id="css-prefixed-properties">
   <div class="col">
-    <h3>Prefixed properties</h3>
-    <p>When using vendor prefixed properties, indent each property such that the declaration's value lines up vertically for easy multi-line editing.</p>
-    <p>In Textmate, use <strong>Text &rarr; Edit Each Line in Selection</strong> (&#8963;&#8984;A). In Sublime Text 2, use <strong>Selection &rarr; Add Previous Line</strong> (&#8963;&#8679;&uarr;) and <strong>Selection &rarr; Add Next Line</strong> (&#8963;&#8679;&darr;).</p>
+    {% highlight css %}{% include css/prefixed-properties.css %}{% endhighlight %}
   </div>
   <div class="col">
-    {% highlight css %}{% include css/prefixed-properties.css %}{% endhighlight %}
+    <h3>ویژگی های پیشوند دار</h3>
+    <p>در صورت استفاده از ویژگی هایی که پیشوند دارند ، آن ها را به ترتیب از خط بلند به کوتاه مرتب کنید تا کد ها خوانا تر باشد.</p>
   </div>
 </div>
 
 <div class="section" id="css-single-declarations">
   <div class="col">
-    <h3>Single declarations</h3>
-    <p>In instances where a rule set includes <strong>only one declaration</strong>, consider removing line breaks for readability and faster editing. Any rule set with multiple declarations should be split to separate lines.</p>
-    <p>The key factor here is error detection—e.g., a CSS validator stating you have a syntax error on Line 183. With a single declaration, there's no missing it. With multiple declarations, separate lines is a must for your sanity.</p>
+    {% highlight css %}{% include css/single-declarations.css %}{% endhighlight %}
   </div>
   <div class="col">
-    {% highlight css %}{% include css/single-declarations.css %}{% endhighlight %}
+    <h3>تعریف های یک خطی</h3>
+    <p>در صورتی که بلاک شما <strong>فقط یک ویژگی</strong> دارد , آن ویژگی و براکت ها را تنها در یک خط قرار دهید.</p>
   </div>
 </div>
 
 <div class="section" id="css-shorthand">
   <div class="col">
-    <h3>Shorthand notation</h3>
-    <p>Limit shorthand declaration usage to instances where you must explicitly set all available values. Frequently overused shorthand properties include:</p>
+    {% highlight css %}{% include css/shorthand.css %}{% endhighlight %}
+  </div>
+  <div class="col">
+    <h3>حالت های خلاصه</h3>
+    <p>برای ویژگی ها یا مقادیر سعی کنید همیشه حالت کامل را در نظر بگیرید یا از قرار دادن مقادیر اضافه پرهیز کنید. ویژگی هایی که اشتباهات رایج در آن ها پیش می آید مانند :</p>
     <ul>
       <li><code>padding</code></li>
       <li><code>margin</code></li>
@@ -289,113 +287,108 @@ layout: default
       <li><code>border</code></li>
       <li><code>border-radius</code></li>
     </ul>
-    <p>Usually we don't need to set all the values a shorthand property represents. For example, HTML headings only set top and bottom margin, so when necessary, only override those two values. A `0` value implies an override of either a browser default or previously specified value.</p>
-    <p>Excessive use of shorthand properties leads to sloppier code with unnecessary overrides and unintended side effects.</p>
-    <p>The Mozilla Developer Network has a great article on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties">shorthand properties</a> for those unfamiliar with notation and behavior.</p>
-  </div>
-  <div class="col">
-    {% highlight css %}{% include css/shorthand.css %}{% endhighlight %}
+    <p>برای مثال نیاز نیست هنگام تنظیم ویژگی <code>padding</code> تمام جهات را مقدار دهی کنیم. زیرا به صورت پیشفرض 0 هستند.</p>
+    <p>با اینکار کدهای CSS خلاصه تر نوشته و از بازنویسی مقادیر پیشفرض خودداری می کنید.</p>
   </div>
 </div>
 
 <div class="section" id="css-nesting">
   <div class="col">
-    <h3>Nesting in Less and Sass</h3>
-    <p>Avoid unnecessary nesting. Just because you can nest, doesn't mean you always should. Consider nesting only if you must scope styles to a parent and if there are multiple elements to be nested.</p>
-    <p>Additional reading:</p>
-    <ul>
-      <li><a href="http://markdotto.com/2015/07/20/css-nesting/">Nesting in Sass and Less</a></li>
-    </ul>
+    {% highlight scss %}{% include css/nesting.scss %}{% endhighlight %}
   </div>
   <div class="col">
-    {% highlight scss %}{% include css/nesting.scss %}{% endhighlight %}
+    <h3>کدنویسی تو در تو برای Less و Sass</h3>
+    <p>ار تو در تو کردن بی دلیل کدها خودداری کنید ، این که می توانید چنین کاری کنید دلیل کافی برای انجام دادنش نیست.</p>
+    <p>مطالعه بیشتر :</p>
+    <ul>
+      <li><a href="http://markdotto.com/2015/07/20/css-nesting/" target="_blank">Nesting in Sass and Less</a></li>
+    </ul>
   </div>
 </div>
 
 <div class="section" id="css-operators">
   <div class="col">
-    <h3>Operators in Less and Sass</h3>
-    <p>For improved readability, wrap all math operations in parentheses with a single space between values, variables, and operators.</p>
+    {% highlight scss %}{% include css/operators.scss %}{% endhighlight %}
   </div>
   <div class="col">
-    {% highlight scss %}{% include css/operators.scss %}{% endhighlight %}
+    <h3>عملگر ها در Less و Sass</h3>
+    <p>جهت خوانایی بهتر ، تمام عملگرهای ریاضی را به همراه عملوند ها در یک پرانتز جداگانه با فاصله های خالی قرار دهید.</p>
   </div>
 </div>
 
 <div class="section" id="css-comments">
   <div class="col">
-    <h3>Comments</h3>
-    <p>Code is written and maintained by people. Ensure your code is descriptive, well commented, and approachable by others. Great code comments convey context or purpose. Do not simply reiterate a component or class name.</p>
-    <p>Be sure to write in complete sentences for larger comments and succinct phrases for general notes.</p>
+    {% highlight css %}{% include css/comments.css %}{% endhighlight %}
   </div>
   <div class="col">
-    {% highlight css %}{% include css/comments.css %}{% endhighlight %}
+    <h3>نظرات درون کد</h3>
+    <p>کدهای شما ممکن است توسط افراد دیگری نیز خوانده یا خطایابی شوند ( برای مثال در پروژه های متن باز یا پروژه های گروهی ). سعی کنید همیشه نظرات مفید و کارآمدی در مورد کدهایی که نوشته اید قرار دهید.</p>
+    <p>از خلاصه نویسی های بی مورد پرهیز کرده و در صورت نیاز حتی جملات طولانی و کامل برای کد خود قرار دهید.</p>
   </div>
 </div>
 
 <div class="section" id="css-classes">
   <div class="col">
-    <h3>Class names</h3>
-    <ul>
-      <li>Keep classes lowercase and use dashes (not underscores or camelCase). Dashes serve as natural breaks in related class (e.g., <code>.btn</code> and <code>.btn-danger</code>).</li>
-      <li>Avoid excessive and arbitrary shorthand notation. <code>.btn</code> is useful for <em>button</em>, but <code>.s</code> doesn't mean anything.</li>
-      <li>Keep classes as short and succinct as possible.</li>
-      <li>Use meaningful names; use structural or purposeful names over presentational.</li>
-      <li>Prefix classes based on the closest parent or base class.</li>
-      <li>Use <code>.js-*</code> classes to denote behavior (as opposed to style), but keep these classes out of your CSS.</li>
-    </ul>
-    <p>It's also useful to apply many of these same rules when creating Sass and Less variable names.</p>
+    {% highlight css %}{% include css/class-names.css %}{% endhighlight %}
   </div>
   <div class="col">
-    {% highlight css %}{% include css/class-names.css %}{% endhighlight %}
+    <h3>نام کلاس ها</h3>
+    <ul>
+      <li>برای نام کلاس ها فقط از حروف کوچک و خط تیره استفاده کنید. خط تیره به صورت رایج موارد مرتبط با هم را نشان می هد ، برای مثال نام های : <code>btn.</code> و <code>btn-danger.</code></li>
+      <li>از عبارات مرتبط و معنا دار استفاده کنید. برای مثال نام <code>btn.</code> برای <em>button</em> مناسب است ولی نام <code>s.</code> هیچ معنا و مفهوم خاصی ندارد.</li>
+      <li>تا جای ممکن نام کلاس ها را کوتاه در نظر بگیرید. از اسامی بلند و بیهوده استفاده نکنید.</li>
+    </ul>
   </div>
 </div>
 
 <div class="section" id="css-selectors">
   <div class="col">
-    <h3>Selectors</h3>
-    <ul>
-      <li>Use classes over generic element tag for optimum rendering performance.</li>
-      <li>Avoid using several attribute selectors (e.g., <code>[class^="..."]</code>) on commonly occuring components. Browser performance is known to be impacted by these.</li>
-      <li>Keep selectors short and strive to limit the number of elements in each selector to three.</li>
-      <li>Scope classes to the closest parent <strong>only</strong> when necessary (e.g., when not using prefixed classes).</li>
-    </ul>
-    <p>Additional reading:</p>
-    <ul>
-      <li><a href="http://markdotto.com/2012/02/16/scope-css-classes-with-prefixes/">Scope CSS classes with prefixes</a></li>
-      <li><a href="http://markdotto.com/2012/03/02/stop-the-cascade/">Stop the cascade</a></li>
-    </ul>
+    {% highlight css %}{% include css/selectors.css %}{% endhighlight %}
   </div>
   <div class="col">
-    {% highlight css %}{% include css/selectors.css %}{% endhighlight %}
+    <h3>انتخاب گر ها</h3>
+    <ul>
+      <li>جهت رندرگیری بهتر از کلاس ها استفاده کنید و اسامی پیشفرض تگ های HTML را در کدهای CSS خود به کار نبرید.</li>
+      <li>هرگز چند انتخابگر مختلف را به صورت متوالی استفاده نکنید ( یا مثلا <code>["..."=^class]</code> ) سرعت مرورگر تحت تاثیر این موارد قرار خواهد گرفت.</li>
+    </ul>
+    <p>مطالعه بیشتر :</p>
+    <ul>
+      <li><a href="http://markdotto.com/2012/02/16/scope-css-classes-with-prefixes/" target="_blank">Scope CSS classes with prefixes</a></li>
+      <li><a href="http://markdotto.com/2012/03/02/stop-the-cascade/" target="_blank">Stop the cascade</a></li>
+    </ul>
   </div>
 </div>
 
 <div class="section" id="css-organization">
   <div class="col">
-    <h3>Organization</h3>
-    <ul>
-      <li>Organize sections of code by component.</li>
-      <li>Develop a consistent commenting hierarchy.</li>
-      <li>Use consistent white space to your advantage when separating sections of code for scanning larger documents.</li>
-      <li>When using multiple CSS files, break them down by component instead of page. Pages can be rearranged and components moved.</li>
-    </ul>
+    {% highlight css %}{% include css/organization-comments.css %}{% endhighlight %}
   </div>
   <div class="col">
-    {% highlight css %}{% include css/organization-comments.css %}{% endhighlight %}
+    <h3>سازماندهی</h3>
+    <ul>
+      <li>کدهای مربوط به یک بخش خاص از وب سایت خود را به صورت دسته بندی شده قرار دهید.</li>
+      <li>از یک روند نظرگذاری مرتب پیروی کنید.</li>
+      <li>بین دسته بندی های خود از فضاهای خالی مناسب استفاده کنید تا در صورت سنگین یا طولانی بودن کد های CSS متن خوانا تری داشته باشید.</li>
+      <li>در صورتی که فایل های CSS مختلفی دارید ، آن ها را بر اساس بخش های سایت جدا کنید نه بر اساس صفحات. مثلا دسته بندی بر اساس صفحه اصلی ، صفحه ارتباط با ما و ... اشتباه است و دسته بندی بر اساس سربرگ ، پانوشت ، عکس ها و ... صحیح است.</li>
+    </ul>
   </div>
 </div>
 
 <div class="section" id="css-editor-prefs">
   <div class="col">
-    <h3>Editor preferences</h3>
-    <p>Set your editor to the following settings to avoid common code inconsistencies and dirty diffs:</p>
+    <h3>تنظیمات ویرایشگر</h3>
+    <p>تنظیمات ویرایشگر خود را به این صورت قرار دهید تا کدهای تمیز و خوانا تری داشته باشید :</p>
     <ul>
-      <li>Use soft-tabs set to two spaces.</li>
-      <li>Trim trailing white space on save.</li>
-      <li>Set encoding to UTF-8.</li>
-      <li>Add new line at end of files.</li>
+      <li>مقدار هر tab را برابر با 2 کارکتر خالی قرار دهید</li>
+      <li>کارکترهای خالی آخر هر خط را حذف کنید</li>
+      <li>کدگذاری را روی UTF-8 قرار دهید</li>
+      <li>آخر هر فایل یک خط خالی بگذارید</li>
     </ul>
-    <p>Consider documenting and applying these preferences to your project's <code>.editorconfig</code> file. For an example, see <a href="https://github.com/twbs/bootstrap/blob/master/.editorconfig">the one in Bootstrap</a>. Learn more <a href="https://editorconfig.org">about EditorConfig</a>.</p>
+    <p>سعی کنید این تنظیمات را در یک فایل <code>editorconfig.</code> اعمال کنید تا در هر ویرایشگری قابل استفاده باشد و نیاز به تنظیم مجدد نباشد ( برای مثال اگر کدهای شما توسط فرد دیگری با ویرایشگر متفاوت باز شود ، آن فرد نیاز به تنظیم ویرایشگر خود ندارد و این فایل همین کار را انجام خواهد داد ) </p>
+    <p>مطالعه بیشتر :</p>
+    <ul>
+      <li><a href="https://editorconfig.org" target="_blank">EditorConfig</a></li>
+      <li><a href="https://github.com/twbs/bootstrap/blob/master/.editorconfig" target="_blank">توضیحات Bootstrap</a></li>
+    </ul>
   </div>
 </div>
