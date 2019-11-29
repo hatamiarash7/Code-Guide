@@ -1,5 +1,5 @@
-name: Code Guide by @mdo / Translated into Persian by @hatamiarash7
-description: Standards for developing consistent, flexible, and sustainable HTML and CSS.
+name: راهنمای برنامه نویسی
+description: استانداردهای لازم برای ایجاد کدهای HTML و CSS سازگار ، انعطاف پذیر و پایدار
 url: https://codeguide.arash-hatami.ir
 permalink: pretty
 sass:
@@ -9,4 +9,4 @@ sass:
 plugins:
   - jekyll-include-cache
 
-exclude: [.jekyll-cache, README.md, Gemfile, Gemfile.lock, _site, CNAME, LICENSE.md, .idea]
+exclude: [.jekyll-cache, README.md, Gemfile, Gemfile.lock, _site, CNAME, LICENSE.md, .idea, vendor]
