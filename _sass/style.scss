@@ -49,10 +49,22 @@ h1, h2, h3, h4 {
   line-height: 1;
   color: #2a2a2a;
 }
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.75rem; }
-h4 { font-size: 1.5rem }
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem
+}
 
 p {
   margin-top: 0;
@@ -90,6 +102,7 @@ pre {
   font-family: "SFMono-Regular", Menlo, "Courier New", monospace;
   font-size: 95%;
 }
+
 code {
   padding: 2px 4px;
   font-size: 85%;
@@ -230,13 +243,16 @@ pre {
 .col {
   margin-bottom: 1.5rem;
 }
+
 .col p {
   max-width: 40rem;
 }
+
 .col + .col {
   padding: 2rem;
   background-color: #f8f9fa;
 }
+
 @media (min-width: 48em) {
   .section {
     display: table;
@@ -280,6 +296,7 @@ h2 {
   font-size: 90%;
   text-align: center;
 }
+
 .footer p {
   margin-bottom: .5rem;
 }
@@ -288,6 +305,7 @@ h2 {
   list-style: none;
   margin-left: 0;
 }
+
 .quick-links li {
   display: inline;
 }

@@ -10,21 +10,25 @@
   font-size: .8rem;
   line-height: 1.3;
   text-align: left;
-  background-color: rgba(0,0,0,.2);
+  background-color: rgba(0, 0, 0, .2);
 }
+
 .fusion-text,
 .fusion-poweredby {
   display: block;
   color: #fff;
 }
+
 .fusion-text:hover,
 .fusion-poweredby:hover {
   text-decoration: none;
 }
+
 .fusion-img {
   float: left;
   margin-right: 1rem;
 }
+
 .fusion-poweredby {
   display: block !important;
   margin-top: .5rem;
