@@ -1,0 +1,12 @@
+name: Code Guide by @mdo / Translated into Persian by @hatamiarash7
+description: Standards for developing consistent, flexible, and sustainable HTML and CSS.
+url: https://codeguide.arash-hatami.ir
+permalink: pretty
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-include-cache
+
+exclude: [.jekyll-cache, README.md, Gemfile, Gemfile.lock, _site, CNAME, LICENSE.md, .idea]
