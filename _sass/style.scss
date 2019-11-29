@@ -241,16 +241,17 @@ pre {
 }
 
 .col {
-  margin-bottom: 1.5rem;
+  padding: 2rem;
+  background-color: #f8f9fa;
 }
 
-.col p {
+.col + .col p {
   max-width: 40rem;
 }
 
 .col + .col {
-  padding: 2rem;
-  background-color: #f8f9fa;
+  margin-bottom: 1.5rem;
+  background-color: white;
 }
 
 @media (min-width: 48em) {
@@ -259,22 +260,20 @@ pre {
     width: 100%;
     table-layout: fixed;
   }
-  .col {
+  .col + .col {
     display: table-cell;
-    padding: 3rem 3rem 3rem 0;
+    padding: 3rem 0 3rem 3rem;
     vertical-align: top;
   }
-  .col + .col {
+  .col {
     border-top: 0;
     padding: 3rem;
   }
 }
 
-// Make the ToC a whole section
-.toc .col + .col {
+.toc .col {
   background-color: #fff;
 }
-
 
 //
 // Sections
