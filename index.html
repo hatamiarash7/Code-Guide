@@ -3,7 +3,7 @@ layout: default
 ---
 
 
-<h2 id="toc">Table of contents</h2>
+<h2 id="toc">فهرست محتوا</h2>
 <div class="section toc">
   <div class="col">
     <h3><a href="#html">HTML</a></h3>
@@ -41,15 +41,15 @@ layout: default
   </div>
 </div>
 
-<h2 id="golden-rule">Golden rule</h2>
-<div class="section" id="golden-rule">
-  <div class="col">
-    <p>Enforce these, or your own, agreed upon guidelines at all times. Small or large, call out what's incorrect. For additions or contributions to this Code Guide, please <a href="https://github.com/mdo/code-guide/issues/new">open an issue on GitHub</a>.</p>
-  </div>
+<h2 id="golden-rule">قانون طلایی</h2>
+<div class="section">
   <div class="col">
     <blockquote>
       <p>Every line of code should appear to be written by a single person, no matter the number of contributors.</p>
     </blockquote>
+  </div>
+  <div class="col">
+    <p>همیشه از این قوانین یا موارد شخصی خودتان استفاده کنید. هر خطای کوچک یا بزرگی بود آن را گزارش دهید. در صورت داشتن هرگونه نظر ، پیشنهاد ، انتقاد یا مشارکت یک <a href="https://github.com/hatamiarash7/Code-Guide/issues/new" target="_blank">Issue ثبت کنید</a>.</p>
   </div>
 </div>
 
@@ -57,93 +57,91 @@ layout: default
 <h2 id="html">HTML</h2>
 <div class="section" id="html-syntax">
   <div class="col">
-    <h3>Syntax</h3>
-    <ul>
-      <li>Don't capitalize tags, including the doctype.</li>
-      <li>Use soft tabs with two spaces—they're the only way to guarantee code renders the same in any environment.</li>
-      <li>Nested elements should be indented once (two spaces).</li>
-      <li>Always use double quotes, never single quotes, on attributes.</li>
-      <li>Don't include a trailing slash in self-closing elements—the <a href="http://dev.w3.org/html5/spec-author-view/syntax.html#syntax-start-tag">HTML5 spec</a> says they're optional.</li>
-      <li>Don’t omit optional closing tags (e.g. <code>&lt;/li&gt;</code> or <code>&lt;/body&gt;</code>).</li>
-    </ul>
+    {% highlight html %}{% include html/syntax.html %}{% endhighlight %}
   </div>
   <div class="col">
-    {% highlight html %}{% include html/syntax.html %}{% endhighlight %}
+    <h3>ترکیب</h3>
+    <ul>
+      <li>از حروف بزرگ برای تگ ها استفاده نکنید ( همچنین برای doctype )</li>
+      <li>برای جلو بردن کدها از tab معادل 2 فاصله خالی استفاده کنید</li>
+      <li>کدهای زیرمجموعه فقط باید یک بار جلو بروند ( معادل 2 فاصله خالی )</li>
+      <li>برای مقادیر تگ های همیشه از ( " ) استفاده کنید نه ( ' )</li>
+      <li>برای المان های مستقل مانند ( <code>&lt;img&gt;</code> ) از اسلش استفاده نکنید — در <a href="http://dev.w3.org/html5/spec-author-view/syntax.html#syntax-start-tag">HTML5</a> این مورد اختیاری می باشد</li>
+      <li>تگ های اختیاری پایانی را حذف نکنید ( مانند <code>&lt;/li&gt;</code> یا <code>&lt;/body&gt;</code>)</li>
+    </ul>
   </div>
 </div>
 
 <div class="section" id="html-doctype">
   <div class="col">
-    <h3>HTML5 doctype</h3>
-    <p>Enforce <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode">standards mode</a> and more consistent rendering in every browser possible with this simple doctype at the beginning of every HTML page.</p>
+    {% highlight html %}{% include html/doctype.html %}{% endhighlight %}
   </div>
   <div class="col">
-    {% highlight html %}{% include html/doctype.html %}{% endhighlight %}
+    <h3>HTML5 doctype</h3>
+    <p>اجرای <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode">حالت استاندارد</a> و رندر گیری بهتر در هر مرورگی با قراردادن این تگ در ابتدای هر فایل HTML انجام خواهد شد.</p>
   </div>
 </div>
 
 <div class="section" id="html-lang">
   <div class="col">
-    <h3>Language attribute</h3>
-    <p>From the HTML5 spec:</p>
-    <blockquote>
-      <p>Authors are encouraged to specify a lang attribute on the root html element, giving the document's language. This aids speech synthesis tools to determine what pronunciations to use, translation tools to determine what rules to use, and so forth.</p>
-    </blockquote>
-    <p>Read more about the <code>lang</code> attribute <a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-element">in the spec</a>. Head to Sitepoint for a <a href="https://www.sitepoint.com/iso-2-letter-language-codes/">list of language codes</a>.</p>
+    {% highlight html %}{% include html/lang.html %}{% endhighlight %}
   </div>
   <div class="col">
-    {% highlight html %}{% include html/lang.html %}{% endhighlight %}
+    <h3>ویژگی lang</h3>
+    <p>با استفاده از این ویژگی در تگ <code>&lt;html&gt;</code> به ابزارهای سینتکس یا ترجمه کمک می کنید که زبان محتوای وب سایت شما را دریافت کرده و متناسب با آن به کاربران خدمات دهند.</p>
   </div>
 </div>
 
 <div class="section" id="html-ie-compatibility-mode">
   <div class="col">
-    <h3>IE compatibility mode</h3>
-    <p>Internet Explorer supports the use of a document compatibility <code>&lt;meta&gt;</code> tag to specify what version of IE the page should be rendered as. Unless circumstances require otherwise, it's most useful to instruct IE to use the latest supported mode with <strong>edge mode</strong>.</p>
-    <p>For more information, <a href="https://stackoverflow.com/questions/6771258/what-does-meta-http-equiv-x-ua-compatible-content-ie-edge-do">read this awesome Stack Overflow article</a>.</p>
+    {% highlight html %}{% include html/ie-compatibility-mode.html %}{% endhighlight %}
   </div>
   <div class="col">
-    {% highlight html %}{% include html/ie-compatibility-mode.html %}{% endhighlight %}
+    <h3>سازگاری با Internet Explorer</h3>
+    <p>مرور گر Internet Explorer یک تگ <code>&lt;meta&gt;</code> دارد که با استفاده از آن می توانید مشخص کنید این مرورگر از کدام نسخه برای رندرگیری صفحات استفاده نماید. در صورتی که تنظیمات خاصی برای این مورد مد نظر ندارید ، می توانید از مقدار <strong>edge</strong> استفاده کنید تا همیشه آخرین نسخه اعمال شود.</p>
+    <p>جهت اصلاعات بیشتر , <a href="https://stackoverflow.com/questions/6771258/what-does-meta-http-equiv-x-ua-compatible-content-ie-edge-do">این صفحه از سایت Stack Overflow</a> را مطالعه کنید.</p>
   </div>
 </div>
 
 <div class="section" id="html-encoding">
   <div class="col">
-    <h3>Character encoding</h3>
-    <p>Quickly and easily ensure proper rendering of your content by declaring an explicit character encoding. When doing so, you may avoid using character entities in your HTML, provided their encoding matches that of the document (generally UTF-8).</p>
+    {% highlight html %}{% include html/encoding.html %}{% endhighlight %}
   </div>
   <div class="col">
-    {% highlight html %}{% include html/encoding.html %}{% endhighlight %}
+    <h3>رمزنگاری کارکتر ها ( رمزگذاری یونیکد )</h3>
+    <p>با اعلام نوع کدگذاری می توانید به راحتی از ارائه صحیح محتوا به کاربران اطمینان پیدا کنید. هنگام انجام این کار ممکن است از استفاده اشخاص برای کارکتر های غیرمجاز نیست جلوگیری کنید تا مطمئن شوید داده های ورودی آن ها مطابق با وب سایت شما باشد. کدگذاری صفحات معمولا UTF-8 می باشد</p>
   </div>
 </div>
 
 <div class="section" id="html-style-script">
   <div class="col">
-    <h3>CSS and JavaScript includes</h3>
-    <p>Per HTML5 spec, typically there is no need to specify a <code>type</code> when including CSS and JavaScript files as <code>text/css</code> and <code>text/javascript</code> are their respective defaults.</p>
-    <h4>HTML5 spec links</h4>
-    <ul>
-      <li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-link-element">Using link</a></li>
-      <li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-style-element">Using style</a></li>
-      <li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/scripting-1.html#the-script-element">Using script</a></li>
-    </ul>
+    {% highlight html %}{% include html/style-script.html %}{% endhighlight %}
   </div>
   <div class="col">
-    {% highlight html %}{% include html/style-script.html %}{% endhighlight %}
+    <h3>وارد کردن CSS و JavaScript</h3>
+    <p>طبق قواعد HTML5 ، نیازی به تعریف ویژگی <code>type</code> برای فایل های جاوا اسکریپت یا CSS نیست. مانند <code>text/css</code> و <code>text/javascript</code> که این موارد به صورت پیشفرض اعمال شده و صحیح هستند.</p>
+    <h4>لینک قواعد HTML5</h4>
+    <ul>
+      <li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-style-element">استفاده از CSS</a></li>
+      <li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/scripting-1.html#the-script-element">استفاده از اسکریپت</a></li>
+    </ul>
   </div>
 </div>
 
 <div class="section" id="html-practicality">
   <div class="col">
-    <h3>Practicality over purity</h3>
-    <p>Strive to maintain HTML standards and semantics, but not at the expense of practicality. Use the least amount of markup with the fewest intricacies whenever possible.</p>
+    <h3>صحیح و شفاف</h3>
+    <p>همیشه برای حفظ استاندارد های HTML تلاش کنید. تا جای ممکن کدهایی با کمترین علامت گذاری و مشکل بنویسید</p>
   </div>
 </div>
 
 <div class="section" id="html-attribute-order">
   <div class="col">
-    <h3>Attribute order</h3>
-    <p>HTML attributes should come in this particular order for easier reading of code.</p>
+    {% highlight html %}{% include html/attribute-order.html %}{% endhighlight %}
+  </div>
+  <div class="col">
+    <h3>ترتیب ویژگی ها</h3>
+    <p>ویژگی ها HTML جهت خوانا تر بودن کد باید به ترتیب قرار بگیرند.</p>
     <ul>
       <li><code>class</code></li>
       <li><code>id</code>, <code>name</code></li>
@@ -152,46 +150,34 @@ layout: default
       <li><code>title</code>, <code>alt</code></li>
       <li><code>role</code>, <code>aria-*</code></li>
     </ul>
-    <p>Classes make for great reusable components, so they come first. Ids are more specific and should be used sparingly (e.g., for in-page bookmarks), so they come second.</p>
-  </div>
-  <div class="col">
-    {% highlight html %}{% include html/attribute-order.html %}{% endhighlight %}
   </div>
 </div>
 
 <div class="section" id="html-boolean-attributes">
   <div class="col">
-    <h3>Boolean attributes</h3>
-    <p>A boolean attribute is one that needs no declared value. XHTML required you to declare a value, but HTML5 has no such requirement.</p>
-    <p>For further reading, consult the <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-microsyntaxes.html#boolean-attributes">WhatWG section on boolean attributes</a>:</p>
-    <blockquote>
-      <p>The presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value.</p>
-    </blockquote>
-    <p>If you <em>must</em> include the attribute's value, and <strong>you don't need to</strong>, follow this WhatWG guideline:</p>
-    <blockquote>
-      <p>If the attribute is present, its value must either be the empty string or [...] the attribute's canonical name, with no leading or trailing whitespace.</p>
-    </blockquote>
-    <p><strong>In short, don't add a value.</strong></p>
+    {% highlight html %}{% include html/boolean-attributes.html %}{% endhighlight %}
   </div>
   <div class="col">
-    {% highlight html %}{% include html/boolean-attributes.html %}{% endhighlight %}
+    <h3>مقادیر Boolean</h3>
+    <p>مقادیر صحیح / غلط مانند <code>disabled</code> ، <code>checked</code> یا <code>selected</code> نیازی به تعریف به عنوان مقدار یک ویژگی ندارند. زبان XHTML به تعریف این ویژگی ها نیاز داشت ولی اکنون در HTML5 می توانید آن ها را به صورت مستقل استفاده کنید.</p>
+    <p>برای مثال در گذشته عبارتی مانند <code>disabled=disabled</code> نیاز بود ولی اکنون می توانید آن را به این صورت بنویسید : <code>disabled</code></p>
   </div>
 </div>
 
 <div class="section" id="html-reducing-markup">
   <div class="col">
-    <h3>Reducing markup</h3>
-    <p>Whenever possible, avoid superfluous parent elements when writing HTML. Many times this requires iteration and refactoring, but produces less HTML. Take the following example:</p>
+    {% highlight html %}{% include html/reducing-markup.html %}{% endhighlight %}
   </div>
   <div class="col">
-    {% highlight html %}{% include html/reducing-markup.html %}{% endhighlight %}
+    <h3>کاهش تگ ها</h3>
+    <p>تا جای ممکن تگ های اضافی در کد خود استفاده نکنید تا در پایان ، کد HTML کوتاه ، منظم و خوانا تری داشته باشید. برای مثال کد روبرو را نگاه کنید :</p>
   </div>
 </div>
 
 <div class="section" id="html-javascript">
   <div class="col">
-    <h3>JavaScript generated markup</h3>
-    <p>Writing markup in a JavaScript file makes the content harder to find, harder to edit, and less performant. Avoid it whenever possible.</p>
+    <h3>کدهای ایجاد شده توسط اسکریپت</h3>
+    <p>کدهای HTML که توسط جاوا اسکریپت ایجاد می شوند ، ناخوانا بوده و در آینده پیدا کردن و ویرایش آن ها سخت تر خواهد بود. تا جای ممکن از این روش خودداری کنید.</p>
   </div>
 </div>
 
