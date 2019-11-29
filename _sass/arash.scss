@@ -144,9 +144,33 @@ h2 {
   p, h3, h4, a, ul, li {
     direction: rtl;
   }
+
+  li {
+    text-align: justify;
+  }
 }
 
-#html-practicality div h3, #html-practicality div p, #html-javascript div h3, #html-javascript div p {
-  text-align: right;
-  direction: rtl;
+#html-practicality div {
+  h3, p {
+    text-align: right;
+    direction: rtl;
+  }
+}
+
+#html-javascript div {
+  h3, p {
+    text-align: right;
+    direction: rtl;
+  }
+}
+
+#css-editor-prefs div {
+  h3, p {
+    text-align: right;
+    direction: rtl;
+  }
+
+  ul {
+    direction: rtl;
+  }
 }
