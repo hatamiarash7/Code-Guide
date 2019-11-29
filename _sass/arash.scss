@@ -89,3 +89,40 @@
 body, p, h1, h2, h3, h4, h5, h6, small {
   font-family: iranyekan, sans-serif !important;
 }
+
+.cg-masthead {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  margin-bottom: 5rem;
+}
+
+.cg-masthead-title {
+  text-align: center;
+  direction: rtl;
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+.cg-masthead-subtitle {
+  float: right;
+  font-size: 25px;
+  text-align: center;
+  width: 100%;
+  direction: rtl;
+  margin-bottom: 2rem;
+  max-width: unset;
+}
+
+.cg-masthead-author {
+  text-align: center;
+  direction: rtl;
+  margin-bottom: 3rem;
+
+  a {
+    color: black;
+  }
+}
+
+.masthead-links {
+  text-align: center;
+}
