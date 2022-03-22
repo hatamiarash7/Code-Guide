@@ -6,15 +6,15 @@ Code Guide is a set of standards for developing consistent, flexible, and sustai
 
 ---
 
-### Author
+## Author
 
 Developed by [@mdo](https://github.com/mdo) - Translated to FA ( Persian ) by me
 
-### License
+## License
 
 Released under MIT by, and copyright, [@mdo](https://github.com/mdo)
 
-### Translations
+## Translations
 
 Translations are maintained by their creators and may not always be up to date with the original here.
 
