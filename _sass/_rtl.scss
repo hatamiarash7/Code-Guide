@@ -1,0 +1,76 @@
+/*
+ * Copyright (c) 2019. Arash Hatami
+ */
+
+.font {
+  font-family: Vazirmatn RD UI FD, sans-serif;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small,
+ul,
+li {
+  font-family: Vazirmatn RD UI FD, sans-serif !important;
+}
+
+.cg-masthead {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  margin-bottom: 5rem;
+
+  .container {
+    text-align: center;
+
+    p {
+      direction: rtl;
+    }
+
+    .cg-icon {
+      display: unset;
+    }
+
+    .cg-masthead-title {
+      text-align: center;
+      direction: rtl;
+      font-size: 4rem;
+      margin-bottom: 3rem;
+    }
+
+    .cg-masthead-subtitle {
+      float: center;
+      font-size: 25px;
+      text-align: center;
+      width: 100%;
+      direction: rtl;
+      margin-bottom: 2rem;
+      max-width: 100%;
+    }
+  }
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  text-align: right;
+}
+
+p,
+h3,
+ul {
+  direction: rtl;
+}
+
+blockquote {
+  p {
+    direction: ltr;
+  }
+}
