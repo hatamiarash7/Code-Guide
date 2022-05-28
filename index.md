@@ -329,27 +329,6 @@ layout: default
 
 </div>
 
-<div markdown="1">
-### Declaration order
-
-Property declarations should be grouped together in the following order:
-
-1. Positioning
-2. Box model
-3. Typographic
-4. Visual
-5. Misc
-
-Positioning comes first because it can remove an element from the normal document flow and override box model related styles. The box model—whether it's flex, float, grid, or table—follows as it dictates a component's dimensions, placement, and alignment. Everything else takes place _inside_ the component or without impacting the previous two sections, and thus they come last.
-
-While `border` is part of the box model, most systems globally reset the [`box-sizing`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing) to `border-box` so that `border-width` doesn't affect overall dimensions. This, combined with keeping `border` near `border-radius`, is why it's under the Visual section instead.
-
-Preprocessor mixins and functions should appear wherever most appropriate. For example, a `border-top-radius()` mixin would go in place of `border-radius` properties, while a `responsive-font-size()` function would go in place of `font-size` properties.
-
-For a complete list of properties and their order, please see the [property order for Stylelint](https://github.com/stormwarning/stylelint-config-recess-order) used by [Bootstrap](https://getbootstrap.com).
-
-</div>
-
 ```scss
 .declaration-order {
   // Positioning
@@ -386,17 +365,24 @@ For a complete list of properties and their order, please see the [property orde
 ```
 
 <div markdown="1">
-### Logical properties
+### ترتیب ویژگی ها
 
-Logical properties are alternatives to directional and dimensonal properties based on abstract terms like _block_ and _inline_. By default, block refers to the vertical direction (top and bottom) while inline refers to the horizontal direction (right and left). You can begin to use these values in your CSS in all modern, evergreen browsers.
+در یک بلاک ، ویژگی هایی که در یک دسته بندی مرتبط وجود دارند باید به ترتیب قرار بگیرند :
 
-**Why use logical properties?** Not every language flows left-ro-right like English, so the [writing mode](https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode) needs to be flexible. With logical properties, you can easily support languages that can be written horizontally or vertically (like Chinese, Japanese, and Korean). Plus, they're usually shorter and simpler to write.
+- محل قرارگیری - Positioning
+- ابعاد و حالت - Box model
+- ویژگی های متنی - Typographic
+- ویژگی ها ظاهری - Visual
+- متفرقه - Misc
 
-**Additional reading:**
+ویژگی های مربوط به محل قرارگیری در ابتدا قرار می گیرند زیرا با توجه به ماهیتشان می توانند یک المان را از کادر خارج کرده یا مقادیر ابعاد و حالت را از بین ببرند. پس از آن ویژگی های مربوط به ابعاد و حالت المان می آید تا مکان نهایی المان و نوع قرارگیری آن را مشخص کند.
 
-- [CSS Logical Properties and Values – MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties)
-- [CSS Logical Properties and Values — CSS Tricks](https://css-tricks.com/css-logical-properties-and-values/)
-- [CSS Writing Modes – MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Writing_Modes)
+برای مثال در حالی که ویژگی `border` بخشی از Box Model می باشد ، برخی سیستم ها به صورت کلی ویژگی [`box-sizing`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing) را ریست کرده و با `border-box` جایگزین می کنند. در این صورت ویژگی `border-width` دیگر اثری در ابعاد شی ما نخواهد داشت. این مورد همراه با تعریف کردن دو ویژگی `border` و `border-radius` باعث خواهند شد این موارد زیرمجموعه بخش Visual یا بصری قرار بگیرند.
+
+ترکیب‌ها و توابع پیش‌پردازنده باید در هر جایی که مناسب‌تر است ظاهر شوند. برای مثال ویژگی `border-top-radius` به جای `border-radius` قرار خواهد گرفت یا ویژگی `responsive-font-size` به جای `font-size` قرار خواهد گرفت.
+
+جهت مشاهده لیست کامل ویژگی ها و ترتیب آن ها به [این مقاله](https://github.com/stormwarning/stylelint-config-recess-order) مراجعه کنید.
+
 </div>
 
 ```scss
@@ -414,6 +400,21 @@ Logical properties are alternatives to directional and dimensonal properties bas
   border-block: 1px solid #eee;
 }
 ```
+
+<div markdown="1">
+### ویژگی های منطقی
+
+ویژگی های منطقی ( Logical ) جایگزین هایی برای ویژگی های جهت و ابعاد هستند مانند `block` و `inline`. به صورت پیشفرض block به جهت های عمودی ( بالا و پایین ) اشاره می کند در حالی که inline به جهت های افقی ( راست و چپ ) اشاره می کند. شما می توانید این ویژگی ها را در تمام قالب های CSS خود با مرورگر های جدید استفاده کنید.
+
+**چرا باید از این ویژگی ها استفاده کنیم ؟**. در جواب این سوال باید بگویم که تمام زبان ها به صورت افقی نوشته نمی شوند. بنابراین [حالت های نوشتاری](https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode) باید منعطف باشد. با استفاده از چنین ویژگی هایی به راحتی می توانید از زبان هایی که به صورت افقی و عمودی نوشته می شوند پشتیبانی کنید مانند کره ای ، ژاپنی و چینی. به علاوه اینکه نوشتن آنها کوتاه تر و ساده تر خواهد شد.
+
+**مطالعه بیشتر :**
+
+- [CSS Logical Properties and Values – MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties)
+- [CSS Logical Properties and Values — CSS Tricks](https://css-tricks.com/css-logical-properties-and-values/)
+- [CSS Writing Modes – MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Writing_Modes)
+
+</div>
 
 <div markdown="1">
 ### Colors
