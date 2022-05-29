@@ -416,19 +416,6 @@ layout: default
 
 </div>
 
-<div markdown="1">
-### Colors
-
-With the support of [CSS Color Levels 4](https://www.w3.org/TR/css-color-4/) [in all major browsers](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgb#space-separated_values), `rgba()` and `hsla()` are now aliases for `rgb()` and `hsl()`, meaning you can modify alpha values in `rgb()` and `hsl()`. Along with this comes support for new space-separated syntax for color values. For compability with future CSS color functions, use this new syntax.
-
-Regardless of your color values and syntax, always ensure your color choices meet [WCAG minimum contrast ratios](https://webaim.org/articles/contrast/) (4.5:1 for 16px and smaller, 3:1 for larger).
-
-**Additional reading:**
-
-- [Smashing Magazine - A Guide To Modern CSS Colors](https://www.smashingmagazine.com/2021/11/guide-modern-css-colors/)
-- [`rgb()` - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgb)
-</div>
-
 ```css
 .element {
   color: rgb(255 255 255 / 0.65);
@@ -437,15 +424,16 @@ Regardless of your color values and syntax, always ensure your color choices mee
 ```
 
 <div markdown="1">
-### Avoid `@import`s
+### رنگ ها
 
-Compared to `<link>`s, `@import` is slower, adds extra page requests, and can cause other unforeseen problems. Avoid them and instead opt for an alternate approach:
+به علت پشتیبانی از [رنگ های سطح 4](https://www.w3.org/TR/css-color-4/) در [تمام مرورگرهای اصلی](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgb#space-separated_values) از این به بعد ویژگی های `rgba` و `hsla` به عنوان میانبر برای `rga` و `hsl` به حساب می آیند ، بنابراین شما می توانید مقدار شفافیت ( Alpha ) را تنظیم کنید. همچنین در نسخه های جدید از قالب تنظیم مقادیر با فاصله نیز پشتیبانی می شود. جهت تطابق پذیری در آینده سعی کنید از این روش استفاده کنید.
 
-- Use multiple `<link>`elements
-- Compile your CSS with a preprocessor like [Sass](https://sass-lang.com/) or [Less](https://lesscss.org/) into a single file
-- Concatenate your CSS files with features provided in Rails, Jekyll, and other environments
+جدای از مقدار رنگ و قالب تعریف آن ، سعی کنید که همیشه رنگ شما قوانین [حداقل کنتراست WCAG](https://webaim.org/articles/contrast/) را رعایت کرده باشد. نسبت `4.5:1` برای `16px` یا کمتر و نسبت `3:1` برای مقادیر بزرگتر.
 
-For more information, [read this article by Steve Souders](https://www.stevesouders.com/blog/2009/04/09/dont-use-import/).
+**بیشتر بخوانید :**
+
+- [Smashing Magazine - A Guide To Modern CSS Colors](https://www.smashingmagazine.com/2021/11/guide-modern-css-colors/)
+- [`rgb()` - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgb)
 
 </div>
 
@@ -460,9 +448,15 @@ For more information, [read this article by Steve Souders](https://www.stevesoud
 ```
 
 <div markdown="1">
-### Media query placement
+### از `import@` استفاده نکنید
 
-Place media queries as close to their relevant rule sets whenever possible. Don't bundle them all in a separate stylesheet or at the end of the document. Doing so only makes it easier for folks to miss them in the future. Here's a typical setup.
+در مقایسه با `<link>` قطعا ‌`import@` بسیار کند تر عمل می کند. این مورد باعث می شود درخواست های اضافی ثبت شود و خطایابی را بسیار سخت تر می کند. می توانید از راه های جایگزین استفاده کنید :
+
+- استفاده از چند `<link>` جداگانه
+- کل فایل های CSS را با استفاده از کتابخانه های پیش پردازنده مانند [Sass](https://sass-lang.com/) یا [Less](https://lesscss.org/) کامپایل کرده و به یک فایل تبدیل کنید
+- در صورت استفاده از فریموورک هایی مانند Rails یا Jekyll می توانید تمام فایل های CSS خود را با یکدیگر الحاق کنید
+
+جهت اطلاعات بیشتر, [این مقاله از Steve Souders](https://www.stevesouders.com/blog/2009/04/09/dont-use-import/) را مطالعه کنید.
 
 </div>
 
@@ -491,11 +485,9 @@ Place media queries as close to their relevant rule sets whenever possible. Don'
 ```
 
 <div markdown="1">
-### Single declarations
+### انتخاب گر های `media@`
 
-In instances where a rule set includes **only one declaration**, consider removing line breaks for readability and faster editing. Any rule set with multiple declarations should be split to separate lines.
-
-The key factor here is error detection—e.g., a CSS validator stating you have a syntax error on Line 183. With a single declaration, there's no missing it. With multiple declarations, separate lines is a must for your sanity.
+در صورت استفاده از این انتخاب گر ها ، آن ها در نزدیک ترین مکان به بلاک های مربوطه قرار دهید. هیچوقت آن ها را به صورت جداگانه در جای دیگر ( مثلا آخر کد ها - مانند خیلی از قالب های آماده که خریداری می کنید ) قرار ندهید. جهت سهولت در برنامه نویسی و خطایابی های آینده ، آن ها را کنار بلاک مربوطه استفاده کنید.
 
 </div>
 
@@ -530,22 +522,11 @@ The key factor here is error detection—e.g., a CSS validator stating you have 
 ```
 
 <div markdown="1">
-### Shorthand notation
+### تعریف های یک خطی
 
-Limit shorthand declaration usage to instances where you must explicitly set all available values. Frequently overused shorthand properties include:
+در صورتی که بلاک شما فقط **یک ویژگی** دارد , آن ویژگی و براکت ها را تنها در یک خط قرار دهید تا ویرایش آن سریعتر شده و خوانا تر شود هر قانونی که دارای چند ویژگی باشد باید به صورت خطهای جدا تعریف شود..
 
-- `padding`
-- `margin`
-- `font`
-- `background`
-- `border`
-- `border-radius`
-
-Usually we don't need to set all the values a shorthand property represents. For example, HTML headings only set top and bottom margin, so when necessary, only override those two values. A `0` value implies an override of either a browser default or previously specified value.
-
-Excessive use of shorthand properties leads to sloppier code with unnecessary overrides and unintended side effects.
-
-The Mozilla Developer Network has a great article on [shorthand properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties) for those unfamiliar with notation and behavior.
+نکته کلیدی این مورد ، خطایابی است. برای مثال اگر یک CSS Validator به شما بگوید که در خط 183 مشکلی وجود دارد ، اگر شما تعریف یک خطی داشته باشید کاملا متوجه مشکل خواهید شد. و در صورتی که چند ویژگی داشته باشید ، خط های جداگانه به راحتی شما کمک خواهند کرد.
 
 </div>
 
@@ -567,6 +548,26 @@ The Mozilla Developer Network has a great article on [shorthand properties](http
   border-top-right-radius: 3px;
 }
 ```
+
+<div markdown="1">
+### حالت های خلاصه
+
+برای ویژگی ها یا مقادیر سعی کنید همیشه حالت کامل را در نظر بگیرید یا از قرار دادن مقادیر اضافه پرهیز کنید. ویژگی هایی که اشتباهات رایج در آن ها پیش می آید مانند :
+
+- `padding`
+- `margin`
+- `font`
+- `background`
+- `border`
+- `border-radius`
+
+معمولا نیاز نداریم تا تمام مقادیر را به صورت خلاصه تعریف کنیم. مثلا برای سربرگ ها فقط Margin های بالا و پایین تعریف می شوند. پس بنابراین اگر نیاز بود این دو مقدار را بازنویسی کنید. تعریف یک مقدار `0` به معنی بازنویسی مقدار پیشفرض مرورگر یا ویژگی قبلی خواهد بود.
+
+استفاده بیش از حد از ویژگی‌های ( خلاصه ) کوتاه‌نویسی منجر به کدهای نامرتب‌ تر و عوارض جانبی ناخواسته می‌شود.
+
+Mozilla Developer Network یک [مقاله مفید](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties) برای افرادی که با این شرایط آشنا نیستند منتشر کرده است..
+
+</div>
 
 <div markdown="1">
 ### Nesting in preprocessors
