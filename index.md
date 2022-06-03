@@ -569,16 +569,6 @@ Mozilla Developer Network یک [مقاله مفید](https://developer.mozilla.o
 
 </div>
 
-<div markdown="1">
-### Nesting in preprocessors
-
-Avoid unnecessary nesting in preprocessors whenever possible—keep it simple and avoid reverse nesting. Consider nesting only if you must scope styles to a parent and if there are multiple elements to be nested.
-
-**Additional reading:**
-
-- <a href="https://markdotto.com/2015/07/20/css-nesting/">Nesting in Sass and Less</a>
-</div>
-
 ```scss
 // Without nesting
 .table > thead > tr > th { … }
@@ -592,9 +582,13 @@ Avoid unnecessary nesting in preprocessors whenever possible—keep it simple an
 ```
 
 <div markdown="1">
-### Operators in preprocessors
+### کدنویسی تو در تو
 
-For improved readability, wrap all math operations in parentheses with a single space between values, variables, and operators.
+تا حد امکان از تودرتوی غیرضروری در پیش پردازشگرها (Sass / Less) خودداری کنید - آن را ساده نگه دارید و از تودرتو معکوس خودداری کنید. این روش را فقط در صورتی استفاده کنید که باید سبک‌ها را به یک Parent اختصاص دهید یا اینکه چندین عنصر وجود دارد که باید تودرتو شوند.
+
+**بیشتر بخوانید :**
+
+- <a href="https://markdotto.com/2015/07/20/css-nesting/">Nesting in Sass and Less</a>
 
 </div>
 
@@ -611,11 +605,9 @@ For improved readability, wrap all math operations in parentheses with a single 
 ```
 
 <div markdown="1">
-### Comments
+### عملگرها در پیش پردازنده ها
 
-Code is written and maintained by people. Ensure your code is descriptive, well commented, and approachable by others. Great code comments convey context or purpose. Do not simply reiterate a component or class name. Use the `//` syntax when writing CSS with preprocessors. When shipping CSS to production, remove all comments.
-
-Be sure to write in complete sentences for larger comments and succinct phrases for general notes.
+جهت خوانایی بهتر ، تمام عملگرهای ریاضی را به همراه عملوند ها در یک پرانتز جداگانه با فاصله های خالی قرار دهید.
 
 </div>
 
@@ -634,16 +626,11 @@ Be sure to write in complete sentences for larger comments and succinct phrases 
 ```
 
 <div markdown="1">
-### Class names
+### نظرات درون کد
 
-- Keep classes lowercase and use dashes (not underscores or camelCase). Dashes serve as natural breaks in related class (e.g., `.btn` and `.btn-danger`).
-- Avoid excessive and arbitrary shorthand notation. `.btn` is useful for _button_, but `.s` doesn't mean anything.
-- Keep classes as short and succinct as possible.
-- Use meaningful names; use structural or purposeful names over presentational.
-- Prefix classes based on the closest parent or base class.
-- Use `.js-*` classes to denote behavior (as opposed to style), but keep these classes out of your CSS.
+کدهای شما ممکن است توسط افراد دیگری نیز خوانده یا خطایابی شوند ( برای مثال در پروژه های متن باز یا پروژه های گروهی ). سعی کنید همیشه نظرات مفید و کارآمدی در مورد کدهایی که نوشته اید قرار دهید.
 
-It's also useful to apply many of these same rules when creating custom properties and preprocessor variable names.
+از خلاصه نویسی های بی مورد پرهیز کرده و در صورت نیاز حتی جملات طولانی و کامل برای کد خود قرار دهید. از عبارت `//` برای نظرگذاری عبارات CSS در پیش پردازنده ها استفاده کنید. زمانی که نسخه Production تهیه میکنید تمام نظرات را حذف کنید.
 
 </div>
 
@@ -660,17 +647,18 @@ It's also useful to apply many of these same rules when creating custom properti
 ```
 
 <div markdown="1">
-### Selectors
+### نام کلاس ها
 
-- Use classes over generic element tags for more explicit and reliable styling that isn't dependent on your markup.
-- Avoid using several attribute selectors (e.g., `[class^="..."]`) on commonly occuring components. Browser performance is known to be impacted by these.
-- Keep selectors short and strive to limit the number of elements in each selector to three.
-- Scope classes to the closest parent `only` when necessary (e.g., when not using prefixed classes).
+- برای نام کلاس ها فقط از حروف کوچک و خط تیره استفاده کنید. خط تیره به صورت رایج موارد مرتبط با هم را نشان می هد ، برای مثال نام های : `btn`. و `btn-danger`.
+- از عبارات مرتبط و معنا دار استفاده کنید. برای مثال نام `btn`. برای _button_ مناسب است ولی نام `s`. هیچ معنا و مفهوم خاصی ندارد.
+- تا جای ممکن نام کلاس ها را کوتاه در نظر بگیرید. از اسامی بلند و بیهوده استفاده نکنید.
+- از اسامی معنادار ، ساختاری و هدفمند استفاده کنید.
+- از پیشوندهای مناسب بر اساس نزدیک ترین Parent استفاده کنید.
+- Prefix classes based on the closest parent or base class.
+- از کلاس های `.js-*` برای نشان دادن رفتارها استفاده کنید ( در مقابل سبک ), ولی سعی کنید این کلاس ها خارج از CSS شما باشند.
 
-**Additional reading:**
+استفاده از بسیاری از این قوانین در هنگام ایجاد ویژگی های سفارشی و نام متغیرهای پیش پردازنده ها نیز مفید است.
 
-- [Scope CSS classes with prefixes](https://markdotto.com/2012/02/16/scope-css-classes-with-prefixes/)
-- [Stop the cascade](https://markdotto.com/2012/03/02/stop-the-cascade/)
 </div>
 
 ```scss
@@ -686,9 +674,17 @@ span { ... }
 ```
 
 <div markdown="1">
-### Child and descendant selectors
+### انتخاب گر ها
 
-When necessary, it may be helpful to use [the child combinator (`>`)](https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator) to limit the cascade of some styles in elements like `<table>`s that are often recursively nested. Use it to limit styles to the immediate children elements of a parent element to avoid unnecessary overrides later on.
+- از کلاس ها استفاده کنید و ترجیحا سراغ تگ های عمومی المان ها نروید. با این کار ظاهر خوانا تری دارید که به کد HTML شما وابسته نیست.
+- از انتخاب گر های متعدد استفاده نکنید. برای مثال `[class^="..."]`. ثابت شده که چنین مواردی عملکرد مرورگر را با اخلال مواجه کرده و سرعت را کم می کند.
+- انتخابگرها را کوتاه نگه دارید و سعی کنید تعداد عناصر را در هر انتخابگر به سه محدود کنید.
+- کلاس ها را فقط وقتی نیاز بود به نزدیک ترین Parent محدود کنید. در غیر اینصورت از کلاس های پیشوند دار استفاده کنید.
+
+**بیشتر بخوانید :**
+
+- [Scope CSS classes with prefixes](https://markdotto.com/2012/02/16/scope-css-classes-with-prefixes/)
+- [Stop the cascade](https://markdotto.com/2012/03/02/stop-the-cascade/)
 
 </div>
 
@@ -700,12 +696,10 @@ When necessary, it may be helpful to use [the child combinator (`>`)](https://de
 ```
 
 <div markdown="1">
-### Organization
+### انتخاب گر های فرزندان
 
-- Organize sections of code by component.
-- Develop a consistent commenting hierarchy.
-- Use consistent white space to your advantage when separating sections of code for scanning larger documents.
-- When using multiple CSS files, break them down by component instead of page. Pages can be rearranged and components moved.
+در صورت نیاز می توانید از [ترکیب کننده فرزندان (`>`)](https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator) استفاده کنید تا حالت آبشاری انتخابگر را برای ظاهر بعضی المان ها مانند جداول که معمولا به صورت Recursive هستند به راحتی محدود کنید. از این روش برای محدود کردن اعمال ظاهر روی فرزندان استفاده کنید تا از بازنویسی های بی مورد جلوگیری شود.
+
 </div>
 
 ```scss
@@ -727,3 +721,13 @@ When necessary, it may be helpful to use [the child combinator (`>`)](https://de
 // Contextual sub-component or modifer
 .element-heading { ... }
 ```
+
+<div markdown="1">
+### سازماندهی
+
+- کدهای مربوط به یک بخش خاص از وب سایت خود را به صورت دسته بندی شده قرار دهید.
+- از یک روند نظرگذاری مرتب پیروی کنید.
+- بین دسته بندی های خود از فضاهای خالی مناسب استفاده کنید تا در صورت سنگین یا طولانی بودن کد های CSS متن خوانا تری داشته باشید.
+- در صورتی که فایل های CSS مختلفی دارید ، آن ها را بر اساس بخش های سایت جدا کنید نه بر اساس صفحات. مثلا دسته بندی بر اساس صفحه اصلی ، صفحه ارتباط با ما و ... اشتباه است و دسته بندی بر اساس سربرگ ، پانوشت ، عکس ها و ... صحیح است.
+
+</div>
