@@ -5,39 +5,39 @@ layout: default
 <h2 id="toc">فهرست محتوا</h2>
 
 <div markdown="1">
-### [HTML](#html)
+### [CSS](#css)
 <!-- no toc -->
-- [HTML syntax](#html-syntax)
-- [HTML5 doctype](#html5-doctype)
-- [Language attribute](#language-attribute)
-- [IE compatibility mode](#ie-compatibility-mode)
-- [Character encoding](#character-encoding)
-- [CSS and JavaScript includes](#css-and-javascript-includes)
-- [Practicality over purity](#practicality-over-purity)
-- [Attribute order](#attribute-order)
-- [Boolean attributes](#boolean-attributes)
-- [Reduce markup](#reduce-markup)
-- [Editor preferences](#editor-preferences)
+- [ترکیب](#css-syntax)
+- [ترتیب ویژگی ها](#section-5)
+- [ویژگی های منطقی](#section-6)
+- [رنگ ها](#section-7)
+- [از import@ استفاده نکنید](#import--)
+- [انتخاب گر های media@](#media)
+- [تعریف های یک خطی](#section-8)
+- [حالت های خلاصه](#section-9)
+- [کدنویسی تو در تو](#section-10)
+- [عملگرها در پیش پردازنده ها](#section-11)
+- [نظرات درون کد](#section-12)
+- [نام کلاس ها](#section-13)
+- [انتخاب گر ها](#section-14)
+- [انتخاب گر های فرزندان](#section-15)
+- [سازماندهی](#section-16)
 </div>
 
 <div markdown="1">
-### [CSS](#css)
+### [HTML](#html)
 <!-- no toc -->
-- [CSS syntax](#css-syntax)
-- [Declaration order](#declaration-order)
-- [Colors](#colors)
-- [Logical properties](#logical-properties)
-- [Avoid @import`s](#avoid-imports)
-- [Media query placement](#media-query-placement)
-- [Single declarations](#single-declarations)
-- [Shorthand notation](#shorthand-notation)
-- [Nesting in preprocessors](#nesting-in-preprocessors)
-- [Operators in preprocessors](#operators-in-preprocessors)
-- [Comments](#comments)
-- [Class names](#class-names)
-- [Selectors](#selectors)
-- [Child and descendant selectors](#child-and-descendant-selectors)
-- [Organization](#organization)
+- [ترکیب](#html-syntax)
+- [نوع سند HTML5](#html5)
+- [ویژگی Language](#language)
+- [سازگاری با IE](#ie---)
+- [رمزنگاری کارکتر ها](#section)
+- [وارد کردن CSS و JavaScript](#css--javascript)
+- [صحیح و شفاف](#section-1)
+- [ترتیب ویژگی ها](#section-2)
+- [مقادیر Boolean](#boolean)
+- [کاهش تگ ها](#section-3)
+- [تنظیمات ویرایشگر](#section-4)
 </div>
 
 ## قانون طلایی
@@ -120,7 +120,7 @@ layout: default
 ```
 
 <div markdown="1">
-### IE حالت سازگاری با
+### سازگاری با IE
 
 این روزها دیگر نیاز نیست جهت سازگاری با Internet Explorer از تگ `<meta>` مربوط به آن استفاده کرد ، مگر آن که بخواهید از IE نسخه 10 و قبل تر از آن پشتیبانی کنید. این تگ در IE11 حذف شد و دیگر در Microsoft Edge استفاده نمی شود.
 
