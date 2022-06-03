@@ -1,5 +1,5 @@
 <h3 align="center">
-  <a href="https://codeguide.co/">
+  <a href="https://cg.arash-hatami.ir">
     <img src="code-guide-logo.png" alt="Code Guide logo" width="192" height="192">
   </a>
   <br>
@@ -9,7 +9,7 @@
 <p align="center" markdown="1">
   Standards for developing consistent, flexible, and sustainable HTML and CSS.
   <br>
-  <a href="https://codeguide.co"><strong>Start reading ☞</strong></a>
+  <a href="https://cg.arash-hatami.ir"><strong>Start reading ☞</strong></a>
 </p>
 
 ---
@@ -38,6 +38,7 @@ Released under MIT by, and copyright, @mdo.
 
 Translations are maintained by their creators and may not always be up to date with the original here.
 
+- [English ( Main Repo )](https://github.com/mdo/code-guide)
 - [Chinese](http://zoomzhao.github.io/code-guide/) - Translated by [Zoom Zhao](https://github.com/ZoomZhao)
 - [Chinese](http://codeguide.bootcss.com/) - Translated by [Wang Sai](https://github.com/wangsai)
 - [Dutch](http://chunfeilung.github.io/code-guide/) - Translated by [Chun Fei Lung](https://github.com/chunfeilung)
@@ -47,6 +48,7 @@ Translations are maintained by their creators and may not always be up to date w
 - [Indonesian](http://diagramatics.github.io/code-guide-id) - Translated by [Steven Sinatra](http://diagramatics.me)
 - [Japanese](http://kia-king.com/code-guide/) - Translated by [Kia King Ishii](https://github.com/kiaking)
 - [Korean](http://code-guide.aliencube.org/) - Translated by [Aliencube](https://github.com/aliencube)
+- [Persian](https://cg.arash-hatami.ir/) - Translated by [Arash Hatami](https://github.com/hatamiarash7)
 - [Polish](http://bondarewicz.github.io/code-guide/) - Translated by [Łukasz Bondarewicz](https://github.com/bondarewicz)
 - [Portuguese](http://diegoeis.github.io/code-guide/) - Translated by [Diego Eis](http://tableless.com.br/)
 - [Romanian](http://vmazare.github.io/code-guide-romanian/) - Translated by [Valeriu Mazare](https://github.com/vmazare)
