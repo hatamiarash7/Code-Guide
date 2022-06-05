@@ -32,11 +32,8 @@
       rel="stylesheet"
       type="text/css"
     />
-    <meta
-      name="description"
-      content="Standards for developing consistent, flexible, and sustainable HTML and CSS"
-    />
-    <link rel="canonical" href="https://codeguide.co" />
+    <meta name="description" content="{{ site.description }}" />
+    <link rel="canonical" href="https://cg.arash-hatami.ir" />
     <link rel="stylesheet" href="cg.css" />
     <link href="/favicon.ico" rel="icon" type="image/x-icon" />
     <link href="/code-guide.svg" rel="icon" type="image/svg+xml" />
@@ -50,18 +47,42 @@
     <meta name="twitter:title" content="Code Guide" />
     <meta name="twitter:description" content="{{ site.description }}" />
     <meta name="twitter:image" content="{{ site.og_image }}" />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-YMQWGXXCH4"
+    ></script>
     <script>
-      window.ga =
-        window.ga ||
-        function () {
-          (ga.q = ga.q || []).push(arguments);
-        };
-      ga.l = +new Date();
-      ga("create", "UA-146052-17", "codeguide.co");
-      ga("set", "anonymizeIp", true);
-      ga("send", "pageview");
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-YMQWGXXCH4");
     </script>
-    <script async src="https://www.google-analytics.com/analytics.js"></script>
+    <script>
+      var _paq = (window._paq = window._paq || []);
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+      (function () {
+        var u = "https://matomo.arash-hatami.ir/";
+        _paq.push(["setTrackerUrl", u + "matomo.php"]);
+        _paq.push(["setSiteId", "11"]);
+        var d = document,
+          g = d.createElement("script"),
+          s = d.getElementsByTagName("script")[0];
+        g.async = true;
+        g.src = u + "matomo.js";
+        s.parentNode.insertBefore(g, s);
+      })();
+    </script>
+    <noscript
+      ><p>
+        <img
+          src="https://matomo.arash-hatami.ir/matomo.php?idsite=11&amp;rec=1"
+          style="border: 0"
+          alt=""
+        /></p
+    ></noscript>
   </head>
   <body>
     {% include header.html %}
